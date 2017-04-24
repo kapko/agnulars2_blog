@@ -80,5 +80,4 @@ var defaultConfig = {
   }
 };
 
-
 module.exports = webpackMerge(defaultConfig, webpackConfig);
