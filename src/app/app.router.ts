@@ -7,4 +7,8 @@ export const Routes = [
 		path: 'about',
 		loadChildren: './about/about.module'
 	},
+	{
+		path: 'about/detail',
+		loadChildren: './about/detail/detail.module'
+	}
 ]

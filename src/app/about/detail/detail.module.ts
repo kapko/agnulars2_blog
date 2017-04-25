@@ -13,12 +13,6 @@ const routes = [
 		component: DetailComponent,
 	}
 ]
-// export class DetailComponent{}
-
-// const routes = [{
-// 	path: '',
-// 	component: DetailComponent,
-// }]
 
 @NgModule({
 	imports: [RouterModule.forChild(routes)],
