@@ -1,6 +1,8 @@
 import {NgModule} from '@angular/core'
 import {RouterModule} from '@angular/router'
 import {HomeComponent} from './home.component'
+import {List} from './list/list.component'
+
 const routes = [
 	{
 		path: '',
@@ -16,7 +18,8 @@ const routes = [
 	imports: [
 		RouterModule.forChild(routes),
 	],
-	declarations:[HomeComponent]
+	exports: [List],
+	declarations:[HomeComponent, List]
 })
 
 export default class HomeModule{}
