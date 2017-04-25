@@ -8,17 +8,21 @@ import 'rxjs'
 })
 
 export class List{
-    API: string = 'http://swapi.co/api/';
+    API: string = 'http://swapi.co/api/films';
+    films: any = [];
 
     constructor(
         http: Http,
         @Inject('PeopleService') private list,
         ){
-            console.log(localStorage.getItem('users'));
 
         http.get(this.API).subscribe(res => {
-            console.log(res, ' res');
+           this.films = res.json().results;
         })
+    }
 
+    link(e){
+        console.log(e, ' e');
+        let link = e.match(/\d+/ig)[0];
     }
 }

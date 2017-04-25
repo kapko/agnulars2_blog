@@ -1,12 +1,9 @@
 <ul>
-    <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas nesciunt debitis minima laudantium nulla eum, illum quidem velit nostrum nihil.</span><a href="">Lorem ipsum.</a></li>
-    <li><span>Perspiciatis illum libero non nihil natus vero voluptates aperiam recusandae aut, nesciunt odit quidem, tempora nulla laboriosam id commodi velit.</span><a href="">Aliquam, quia.</a></li>
-    <li><span>Laboriosam explicabo, provident, porro natus dolorum ratione sed minus odio? Molestias nemo placeat sequi aut nihil quia quidem possimus consequatur.</span><a href="">Beatae, eius?</a></li>
-    <li><span>Laudantium magnam soluta nam minus est expedita dolores vel voluptatum, facere et, nisi dignissimos explicabo, tenetur repudiandae sint? Error, modi!</span><a href="">Iste, consequatur.</a></li>
-    <li><span>Vero molestias repudiandae quo, praesentium, ducimus ipsa dolorum soluta magni rem illo sit reiciendis velit ullam, commodi maxime nulla dolore?</span><a href="">Dolore, quos!</a></li>
-    <li><span>Quisquam eaque fuga, expedita sunt, doloribus dolores voluptatum, fugit accusantium doloremque ex deserunt a voluptatem cumque architecto impedit tempore nemo.</span><a href="">Veniam, aliquam.</a></li>
-    <li><span>Veniam consequatur dolores repellendus iste aspernatur ipsa eos quam quidem quaerat, debitis sint fuga, dolorum, corporis hic veritatis voluptates. Nemo.</span><a href="">Mollitia, earum.</a></li>
-    <li><span>Molestiae eum quae laudantium ea placeat illum repellat explicabo ipsam maxime maiores sit excepturi, voluptatum doloribus eligendi sequi, laborum odit.</span><a href="">Iste, a!</a></li>
-    <li><span>Ullam, illo, sapiente. Quibusdam incidunt error totam asperiores aut vel voluptatum illum perferendis, deleniti dicta qui libero maiores at necessitatibus.</span><a href="">Eius, delectus.</a></li>
-    <li><span>Officiis veniam, fuga id ratione non architecto tempora consequatur ducimus dignissimos! Placeat corrupti odit nisi. Quam cumque officia voluptatibus itaque.</span><a href="">Culpa, necessitatibus!</a></li>
+    <li *ngFor="let film of films">
+        <h5>Title: {{ film.title }}</h5>
+        <p>Producer: {{ film.producer }} <span>Create date: {{ film.release_date }}</span></p>
+        <hr>
+        <p>Director {{ film.director }}</p>
+        <a (click)="link(film.url)">Lorem ipsum.</a>
+    </li>
 </ul>
