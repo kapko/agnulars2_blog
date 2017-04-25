@@ -1,20 +1,20 @@
-import {Component} from '@angular/core'
+import {Component, Inject} from '@angular/core'
 import {Http} from '@angular/http'
 import 'rxjs'
-import {Service} from './list.service'
 
 @Component({
     selector: 'list',
     template: require('./list.template.html'),
 })
 
-export class List extends Service{
+export class List{
     API: string = 'http://swapi.co/api/';
 
-    constructor(http: Http){
-        super()
-
-        console.log(this.getAll());
+    constructor(
+        http: Http,
+        @Inject('PeopleService') private list,
+        ){
+            console.log(localStorage.getItem('users'));
 
         http.get(this.API).subscribe(res => {
             console.log(res, ' res');

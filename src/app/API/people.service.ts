@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core'
 
 @Injectable()
+export class PeopleService{
 
-export class ListService{
     getAll(){
-        return 'return all names'
+        return 'amazing service with came from'; 
     }
 }
